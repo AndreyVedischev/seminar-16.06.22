@@ -2,15 +2,14 @@
 using static System.Console;
 Clear();
 
-int [] array = new int[8];
+int [] array = new int[20];
 FilArray(array);
 PrintArray(array);
 
 void FilArray(int[] collection)
 {
-    int length = collection.Length;
     int index = 0;
-    while(index < length)
+    for(int i = 0; i < collection.Length; i++)
     {
         collection[index] = new Random().Next(1,8);
         index++;
@@ -20,9 +19,8 @@ void FilArray(int[] collection)
 void PrintArray(int[] col)
 
 {
-    int count = col.Length;
     int position = 0;
-    while(position < count)
+    for(int i = 0; i < col.Length; i++)
     {
         Console.Write($"{col[position]}, ");
         position++;
